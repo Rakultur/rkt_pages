@@ -1,0 +1,112 @@
+/* Css general proyecto propuesta */
+
+/* Variables generales */
+
+:root {
+    --Blanco: #f8f8ff;
+    --Verde: #9dc066;
+    --Azul: #2b5675;
+    --Gris: #b1b1b0;
+}
+
+/* Header */
+
+/* Nav */
+
+/* flex-column */
+
+/* flex-row */
+
+/* hero */
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/hero.gif);
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-card {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #00888da6;
+    border-radius: 40px;
+}
+
+.hero-card img {
+    width: 270px;
+    height: 260px;
+}
+
+.hero-card a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(130, 160, 95);
+    color: aliceblue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hero-card a:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* hero-mantenimiento */
+
+.hero-mantenimiento {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/mantenimiento_hero.gif);
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-mantenimiento-card {
+    width: 300px;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #185e97;
+    color: aqua;
+    border-radius: 40px;
+}
+
+.hero-mantenimiento-card img {
+    width: 250px;
+    height: 200px;
+}
+
+.hero-mantenimiento-card a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    width: 250px;
+    border-radius: 5px;
+    background-color: rgb(252, 252, 252);
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.hero-mantenimiento-card a:hover {
+    background-color: rgba(255, 255, 255, 0.699);
+}
