@@ -13,6 +13,162 @@
 
 /* Nav */
 
+#menu {
+    background: #2B5675;
+    height: 58px;
+    padding-right: 18px;
+    border-radius: 0px;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+    text-align: right;
+}
+
+#menu li {
+    display: inline-block;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 58px;
+    padding: 0 14px;
+    text-decoration: none;
+    color: var(--Blanco);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\002B";
+    margin-left: 5px;
+}
+
+#menu li a:hover {
+    color: #0099CC;
+    background: var(--Blanco);
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 58px;
+    width: 100%;
+    opacity: 0;
+    cursor: pointer
+}
+
+#menu label {
+    display: none;
+    line-height: 58px;
+    text-align: center;
+    position: absolute;
+    left: 35px
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    color: #FFFFFF;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    text-align: left;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block
+}
+
+#menu ul.sub-menus a:hover {
+    background: #F2F2F2;
+    color: #444444;
+}
+
+@media screen and (max-width: 800px) {
+    #menu {
+        position: relative
+    }
+
+    #menu ul {
+        background: #444444;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+        text-align: left;
+    }
+
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+
+    #menu input {
+        z-index: 4
+    }
+
+    #menu input:checked+label {
+        color: #FFFFFF
+    }
+
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+
+    #menu input:checked~ul {
+        display: block
+    }
+}
+
 /* flex-column */
 
 /* flex-row */
@@ -20,93 +176,59 @@
 /* hero */
 
 .hero {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/assets/hero.gif);
+    background-color: var(--Blanco);
     display: flex;
-    flex-flow: column wrap;
-    align-content: center;
+    flex-wrap: wrap;
     justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.hero-card {
-    width: 300px;
-    height: 500px;
-    display: flex;
-    flex-flow: column wrap;
     align-items: center;
-    justify-content: center;
-    background-color: #00888da6;
-    border-radius: 40px;
-}
-
-.hero-card img {
-    width: 270px;
-    height: 260px;
-}
-
-.hero-card a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 25px;
-    width: 250px;
-    border-radius: 5px;
-    background-color: rgb(130, 160, 95);
-    color: aliceblue;
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
-.hero-card a:hover {
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-/* hero-mantenimiento */
-
-.hero-mantenimiento {
-    width: 100vw;
-    height: 100vh;
-    background-image: url(/assets/mantenimiento_hero.gif);
-    display: flex;
-    flex-flow: column wrap;
     align-content: center;
-    justify-content: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    height: 80vh;
+    flex-direction: row;
 }
 
-.hero-mantenimiento-card {
+.hero-items {
     width: 300px;
-    height: 500px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.hero-titulo {
+    color: var(--Verde);
+    font-style: oblique;
+    font-size: 50px;
+}
+
+.hero-logo {
+    width: 300px;
+    height: 300px;
+}
+
+/* Contenido */
+
+/* Footer */
+
+.footer {
+    background-color: var(--Verde);
+    height: 150px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-    background-color: #185e97;
-    color: aqua;
-    border-radius: 40px;
 }
 
-.hero-mantenimiento-card img {
-    width: 250px;
-    height: 200px;
+.footer div {
+    padding: 20px;
 }
 
-.hero-mantenimiento-card a {
-    text-align: center;
+.footer a {
     text-decoration: none;
-    font-size: 25px;
-    width: 250px;
-    border-radius: 5px;
-    background-color: rgb(252, 252, 252);
     color: black;
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
-.hero-mantenimiento-card a:hover {
-    background-color: rgba(255, 255, 255, 0.699);
+.footer div img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
 }
