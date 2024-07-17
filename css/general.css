@@ -187,8 +187,6 @@
 }
 
 .hero-items {
-    width: 300px;
-    height: 300px;
     margin: 10px;
     text-align: center;
     align-content: center;
@@ -201,8 +199,8 @@
 }
 
 .hero-logo {
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
 }
 
 /* Contenido */
@@ -211,7 +209,6 @@
 
 .footer {
     background-color: var(--Verde);
-    height: 150px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
