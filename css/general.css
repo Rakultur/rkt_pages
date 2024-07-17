@@ -182,7 +182,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    height: 80vh;
+    height: 100vh;
     flex-direction: row;
 }
 
@@ -203,7 +203,73 @@
     height: 250px;
 }
 
+/* Row */
+
+.flex-row {
+    overflow: hidden;
+    background-color: var(--Blanco);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.flex-row-item {
+    width: 45%;
+    height: 500px;
+    margin: 10px;
+    padding: 10px;
+    background-color: var(--Gris);
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}
+
+.flex-row-item h3 {
+    font-size: 30px;
+}
+
+/* Column */
+
+.flex-column {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+}
+
+.flex-column-item {
+    width: 80vw;
+    height: 450px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: var(--Azul);
+    color: var(--Blanco);
+    text-align: center;
+    align-content: center;
+}
+
+.flex-column-item h3 {
+    font-size: 30px;
+}
+
 /* Contenido */
+
+.logo-servicio {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-clientes {
+    width: 80px;
+    height: 80px;
+}
 
 /* Footer */
 
