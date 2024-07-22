@@ -298,6 +298,11 @@ strong {
     height: 40vh;
 }
 
+.img-80{
+    width: 80px;
+    height: 80px;
+}
+
 /* Footer */
 
 .footer {
