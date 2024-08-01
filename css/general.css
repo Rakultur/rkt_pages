@@ -228,7 +228,7 @@ strong {
 }
 
 .flex-column-item {
-    width: 80vw;
+    width: 95vw;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -275,8 +275,7 @@ strong {
 
 #slider {
     overflow: hidden;
-    width: 95vw;
-    height: 550px;
+    height: 600px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -284,7 +283,12 @@ strong {
 }
 
 .slide {
-    float: left;
+    width: 95vw;
+}
+
+.slide img {
+    height: 400px;
+    width: 3000px;
 }
 
 .buttons a img {
@@ -292,21 +296,29 @@ strong {
     height: 60px;
 }
 
-.slide img {
-    image-resolution: from-image;
-    width: 50vw;
-    height: 40vh;
-}
-
-.img-80{
+.img-80 {
     width: 80px;
     height: 80px;
+}
+
+/* logos */
+
+.cliente_logo {
+    width: 200px;
+    height: 160px;
+    transition: 0.2s;
+}
+
+.cliente_logo:hover {
+    scale: 1.5;
+    z-index: 10000;
 }
 
 /* Footer */
 
 .footer {
-    background-color: var(--Verde);
+    background-color: var(--Azul);
+    color: var(--Blanco);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -320,7 +332,7 @@ strong {
 
 .footer a {
     text-decoration: none;
-    color: black;
+    color: var(--Blanco);
 }
 
 .footer div img {
@@ -330,6 +342,10 @@ strong {
 }
 
 /* Generales */
+
+.h-mediano {
+    height: 50vh;
+}
 
 .text-justify {
     text-align: justify;
