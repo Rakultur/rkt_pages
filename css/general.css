@@ -36,31 +36,31 @@ strong {
 
 /* Nav */
 
-#menu {
+.menu {
     background: #2B5675;
     height: 58px;
     padding-right: 18px;
     border-radius: 0px;
 }
 
-#menu ul,
-#menu li {
+.menu ul,
+.menu li {
     margin: 0 auto;
     padding: 0;
     list-style: none
 }
 
-#menu ul {
+.menu ul {
     width: 100%;
     text-align: right;
 }
 
-#menu li {
+.menu li {
     display: inline-block;
     position: relative;
 }
 
-#menu a {
+.menu a {
     display: block;
     line-height: 58px;
     padding: 0 14px;
@@ -70,17 +70,17 @@ strong {
     text-transform: capitalize;
 }
 
-#menu a.dropdown-arrow:after {
+.menu a.dropdown-arrow:after {
     content: "\002B";
     margin-left: 5px;
 }
 
-#menu li a:hover {
+.menu li a:hover {
     color: #0099CC;
     background: var(--Blanco);
 }
 
-#menu input {
+.menu input {
     display: none;
     margin: 0;
     padding: 0;
@@ -90,7 +90,7 @@ strong {
     cursor: pointer
 }
 
-#menu label {
+.menu label {
     display: none;
     line-height: 58px;
     text-align: center;
@@ -98,14 +98,14 @@ strong {
     left: 35px
 }
 
-#menu label:before {
+.menu label:before {
     font-size: 1.6em;
     color: #FFFFFF;
     content: "\2261";
     margin-left: 20px;
 }
 
-#menu ul.sub-menus {
+.menu ul.sub-menus {
     height: auto;
     overflow: hidden;
     width: 170px;
@@ -115,88 +115,29 @@ strong {
     display: none;
 }
 
-#menu ul.sub-menus li {
+.menu ul.sub-menus li {
     display: block;
     text-align: left;
     width: 100%;
 }
 
-#menu ul.sub-menus a {
+.menu ul.sub-menus a {
     color: #FFFFFF;
     font-size: 16px;
 }
 
-#menu li:hover ul.sub-menus {
+.menu li:hover ul.sub-menus {
     display: block
 }
 
-#menu ul.sub-menus a:hover {
+.menu ul.sub-menus a:hover {
     background: #F2F2F2;
     color: #444444;
-}
-
-@media screen and (max-width: 800px) {
-    #menu {
-        position: relative
-    }
-
-    #menu ul {
-        background: #444444;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        left: 0;
-        z-index: 3;
-        height: auto;
-        display: none;
-        text-align: left;
-    }
-
-    #menu ul.sub-menus {
-        width: 100%;
-        position: static;
-    }
-
-    #menu ul.sub-menus a {
-        padding-left: 30px;
-    }
-
-    #menu li {
-        display: block;
-        float: none;
-        width: auto;
-    }
-
-    #menu input,
-    #menu label {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: block
-    }
-
-    #menu input {
-        z-index: 4
-    }
-
-    #menu input:checked+label {
-        color: #FFFFFF
-    }
-
-    #menu input:checked+label:before {
-        content: "\00d7"
-    }
-
-    #menu input:checked~ul {
-        display: block
-    }
 }
 
 /* Row */
 
 .flex-row {
-    overflow: hidden;
-    background-color: var(--Blanco);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -207,7 +148,6 @@ strong {
     width: 45%;
     margin: 10px;
     padding: 10px;
-    background-color: var(--Verde);
     border-radius: 10px;
     display: flex;
     flex-flow: column;
@@ -219,8 +159,6 @@ strong {
 /* Column */
 
 .flex-column {
-    overflow: hidden;
-    background-color: var(--Blanco);
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -232,8 +170,6 @@ strong {
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
-    background-color: var(--Azul);
-    color: var(--Blanco);
     display: flex;
     flex-flow: column;
     text-align: justify;
@@ -306,12 +242,13 @@ strong {
 .cliente_logo {
     width: 200px;
     height: 160px;
+    padding: 5px;
+    margin: 5px;
     transition: 0.2s;
 }
 
 .cliente_logo:hover {
-    scale: 1.5;
-    z-index: 10000;
+    scale: 2;
 }
 
 /* Footer */
@@ -321,7 +258,7 @@ strong {
     color: var(--Blanco);
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -341,6 +278,15 @@ strong {
     padding: 5px;
 }
 
+/* Imagenes */
+
+/* Logos */
+
+.logo_pequeño {
+    width: 80px;
+    height: 80px;
+}
+
 /* Generales */
 
 .h-mediano {
@@ -356,6 +302,63 @@ strong {
 /* Media Query */
 
 @media only screen and (max-width: 800px) {
+
+    /* Menu */
+
+    .menu {
+        position: relative;
+    }
+
+    .menu ul {
+        background: var(--Verde);
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none;
+        text-align: left;
+    }
+
+    .menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    .menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    .menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    .menu input,
+    .menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+    }
+
+    .menu input {
+        z-index: 4;
+    }
+
+    .menu input:checked+label {
+        color: var(--Blanco);
+    }
+
+    .menu input:checked+label:before {
+        content: "\00d7";
+    }
+
+    .menu input:checked~ul {
+        display: block;
+    }
 
     /* Row */
 
